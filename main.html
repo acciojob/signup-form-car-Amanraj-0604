@@ -1,57 +1,73 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<form action="" method="post">
-		<lable  for="name">Name</lable>
-		<input  type="text" required placeholder="Name"/>
 
-		<lable for="email">Email</lable>
-		<input type="email" required id="email" placeholder="Email"/>
+  <form action="" method="post">
 
-		<label>Gender</label><br>
+    <!-- Name -->
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" placeholder="Name" required><br><br>
 
-		<input type="radio" id="gender_m" name="gender" >
-		<label for="gender_m">Male</label>
+    <!-- Email -->
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Email" required><br><br>
 
-		<input type="radio" id="gender_f" name="gender" >
-		<label for="gender_f">Female</label
+    <!-- Gender (radio group) -->
+    <label>Gender</label><br>
+    <input type="radio" id="gender_m" name="gender" value="male" required>
+    <label for="gender_m">Male</label>
 
-		<lable for="cars">Car Brands</lable>
-		
-		<select id="cars">
-				<option value="" disabled selected>--Please choose an option--</option>
-				<option value="Tata Seara">Tata Seara</option>
-				<option value="Tata Nano">Tata Nano</option>
-				<option value="Tata Safari">Tata Safari</option>
-		</select>
+    <input type="radio" id="gender_f" name="gender" value="female">
+    <label for="gender_f">Female</label>
+    <br><br>
 
-		<lable for="age">Age</lable>
-		<input type="number" id="age" placeholder="Age" required/>
+    <!-- Car Brands (select) -->
+    <label for="cars">Car Brands</label><br>
+    <select id="cars" name="cars" required>
+      <option value="" disabled selected>--Please choose an option--</option>
+      <option value="Tata Seara">Tata Seara</option>
+      <option value="Tata Nano">Tata Nano</option>
+      <option value="Tata Safari">Tata Safari</option>
+    </select>
+    <br><br>
 
-		<lable for="dob">DOB</lable>
-		<input type="date" id="dob" required/>
+    <!-- Age -->
+    <label for="age">Age</label><br>
+    <input type="number" id="age" name="age" placeholder="Age" required>
+    <br><br>
 
-		<label for="tel">Phone Number</label>
-		<input type="tel" id="tel" placeholder="xxx-xxx-xxxx" />
+    <!-- DOB -->
+    <label for="dob">DOB</label><br>
+    <input type="date" id="dob" name="dob" required>
+    <br><br>
 
-		<lable for="password">Password</lable>
-		<input type="password" required id="password" placeholder="Password"/> 
+    <!-- Phone -->
+    <label for="tel">Phone Number</label><br>
+    <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx">
+    <br><br>
 
-		<lable for="tos">I agree to the TOS	</lable>
-		<input type="checkbox" required id="tos"/>
+    <!-- Password -->
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+    <br><br>
 
-		<input type="submit"/>
-	</form>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <!-- TOS -->
+    <input type="checkbox" id="tos" name="tos" required>
+    <label for="tos">I agree to the TOS</label>
+    <br><br>
 
+    <!-- Submit button -->
+    <button type="submit">Sign Up</button>
+
+  </form>
+
+  <!-- the entire body must be written by student -->
+  <script type="text/javascript" src="./script.js"></script>
 </body>
-
 </html>
